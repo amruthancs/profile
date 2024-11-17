@@ -385,6 +385,7 @@
           BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
         line-height: 1.5;
         width: 100%;
+        overflow-x: hidden;
         /* margin: 0;
       font-family: Arial, sans-serif; */
       transition: background-color 0.3s, color 0.3s; 
@@ -431,25 +432,25 @@
           flex-direction: column;
           align-items: center;
           margin: auto;
-          padding: 35px;
+          position: fixed;
         }
       }
       .timeline-container {
-        position: relative;
+        /* position: relative; */
         width: 80%;
         margin: 50px auto;
         padding-left: 20px;
         border-left: 4px solid #0073b1;
       }
       .timeline-item {
-        position: relative;
+        /* position: relative; */
         margin-bottom: 30px;
       }
       .timeline-item:last-child {
         margin-bottom: 0;
       }
       .timeline-item::before {
-        content: "";
+        /* content: ""; */
         position: absolute;
         left: -8px;
         top: 0;
@@ -1141,15 +1142,21 @@
     const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
       const links = document.querySelectorAll(".nav-links li");
-  
+      
+      
       hamburger.addEventListener('click', () => {
           navLinks.classList.toggle("open");
           links.forEach(link => {
-              link.classList.toggle("fade");
+        link.classList.toggle("fade");
           });
-  
           hamburger.classList.toggle("toggle");
       });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.click();
+        })
+    });
 
       // Typing effect
      /* function typeEffect() {
