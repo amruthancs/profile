@@ -401,6 +401,9 @@
         background-color: #0078d7;
         padding: 10px 40px;
         color: #fff;
+        position: sticky;
+        top: 0;
+        z-index:1000;
       }
       .navbar ul {
         display: flex;
@@ -469,7 +472,7 @@
       .timeline-content h3 {
         margin: 0;
         font-size: 18px;
-        color: #0073b1;
+        /* color: #0073b1; */
       }
       .timeline-content p {
         margin: 5px 0;
@@ -478,6 +481,9 @@
       .timeline-content span {
         font-size: 12px;
         color: tomato;
+      }
+      .timeline-content:hover{
+        box-shadow: 5px 5px 10px #2684bb, -5px -5px 10px #4d4ee9;        
       }
       .emoji {
         display: inline-block;
@@ -491,13 +497,16 @@
             margin: 40px auto;
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 10px 10px 20px #2684bb, -10px -10px 20px #4d4ee9;        
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .profile-card:hover{
+          box-shadow: 5px 5px 10px #2684bb, -5px -5px 10px #4d4ee9;        
         }
         .profile-card h1 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 10px;
-            color: #2a9df4;
+            /* color: #2a9df4; */
         }
         .profile-card p {
             font-size: 1rem;
@@ -566,13 +575,14 @@
       border: 1px solid #e0e0e0;
       border-radius: 10px;
       padding: 15px;
-      box-shadow: 5px 5px 10px #efd812, -5px -5px 10px #f7e81a;
       transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .award-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 5px #efd812, -2px -2px 5px #f7e81a;
+
     }
 
     .award-icon img {
@@ -634,8 +644,7 @@
 
     .project-card {
       border-radius: 10px;
-      box-shadow: 10px 10px 20px #2684bb, -10px -10px 20px #4d4ee9;        
-
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
       /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -644,7 +653,7 @@
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 5px 5px 10px #2684bb, -5px -5px 10px #4d4ee9;        
     }
 
     .project-thumbnail img {
@@ -807,7 +816,7 @@
 }
     </style>
   </head>
-  <body>
+  <body class="dark-mode">
     <div class="navbar">
       <span>Amruthan C S</span>
       <div class="hamburger">
@@ -818,11 +827,11 @@
       <ul class="nav-links" id="tabs">
         <li data-tab="home">🏠 Home</li>
         <li data-tab="about">📄 About</li>
+        <li data-tab="experience">💼 Experience</li>
         <li data-tab="awards">🏆 Awards</li>
         <li data-tab="projects">📂 Projects</li>
-        <li data-tab="experience">💼 Experience</li>
-        <li data-tab="blogs">✍️ Blogs</li>
-        <span class="toggle" id="darkModeToggle">🌙</span>
+        <!-- <li data-tab="blogs">✍️ Blogs</li> -->
+        <span class="toggle" id="darkModeToggle">☀️</span>
       </ul>
       
     </div>
@@ -851,13 +860,26 @@
       </div>
  
     <div id="about" class="tab-content">
-      <p>
-        About Amruthan: <div class="profile-card">
-            <h1>Software Engineer Profile</h1>
+     <div class="profile-card">
+            <h1>! an another boring software Engineer</h1>
+            "When others say, 'It can't be done,' that’s my cue to step in and prove them wrong. I don’t just face challenges—I own them, thrive on their intensity, and push beyond limits to conquer them. The tougher the battle, the sharper my focus, and the greater my resolve. For me, the impossible isn't a barrier—it's an invitation to rise, redefine, and deliver."
+            Born to follow the beaten path, but destined to carve my own trail. When the ordinary calls, I answer with the extraordinary, proving that limits are meant to be shattered.
             <p>
                 I am a <span class="highlight">Software Engineer</span> with expertise in 
                 <span class="highlight">Java, Spring Boot</span>, and <span class="highlight">Angular</span>. 
                 Proficient in building and maintaining enterprise-level applications with a focus on performance and scalability.
+                <h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://codepen.io/amruthan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="amruthan" height="30" width="40" /></a>
+<a href="https://twitter.com/amruthan_c_s" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="amruthan_c_s" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/amruthan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="amruthan" height="30" width="40" /></a>
+<a href="https://www.codechef.com/users/amruthan20" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="amruthan20" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/amtn2000" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="amtn2000" height="30" width="40" /></a>
+<a href="https://www.hackerearth.com/@amruthan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="@amruthan" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
             </p>
             <div class="experience-container">
                 <div class="experience-item">
@@ -870,7 +892,52 @@
                 </div>
             </div>
         </div>
-      </p>
+    </div>
+    <div id="experience" class="tab-content">
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Software Engineering Specialist</h3>
+            <p>Dassault Systemes</p>
+            <span>April 2024 - Present</span>
+            <p>
+              As a Full Stack Developer at BIOVIA, I specialize in developing
+              stateful web applications using Angular with NgRx store and
+              backend service built on Java. I use TDD approach for doing
+              development.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Senior Software Engineer</h3>
+            <p>Accenture</p>
+            <span>August 2021 - March 2023</span>
+            <p>
+              Senior Java Developer for 27+ apps of AT&T (An American Telecom
+              Company), processing millions of transactions daily for their
+              Billing Data System (BDS). Developed Web Service Components and
+              Rest API components in the backend using spring boot and spring
+              MVC for the application UI.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Software Engineer</h3>
+            <p>Accenture</p>
+            <span>August 2021 - March 2023</span>
+            <p>
+              Developed Java Spring MVC Application and their respective Batch
+              Jobs, enabling end‑to‑end functionality for bill transformation.
+              Created a chatbot to analyze and discuss user stories with
+              Generative AI. Generated test cases automatically with GenAI in
+              AT&T sponsored Sandbox VMs, receiving accolades from Senior
+              Directors from AT&T.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="awards" class="tab-content">
       <div class="awards-section">
@@ -1051,61 +1118,15 @@
       </div>
     
          
-    
+
         </div>
       </div>
     </div>
-    <div id="experience" class="tab-content">
-      <div class="timeline-container">
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Software Engineering Specialist</h3>
-            <p>Dassault Systemes</p>
-            <span>April 2024 - Present</span>
-            <p>
-              As a Full Stack Developer at BIOVIA, I specialize in developing
-              stateful web applications using Angular with NgRx store and
-              backend service built on Java. I use TDD approach for doing
-              development.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Senior Software Engineer</h3>
-            <p>Accenture</p>
-            <span>August 2021 - March 2023</span>
-            <p>
-              Senior Java Developer for 27+ apps of AT&T (An American Telecom
-              Company), processing millions of transactions daily for their
-              Billing Data System (BDS). Developed Web Service Components and
-              Rest API components in the backend using spring boot and spring
-              MVC for the application UI.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Software Engineer</h3>
-            <p>Accenture</p>
-            <span>August 2021 - March 2023</span>
-            <p>
-              Developed Java Spring MVC Application and their respective Batch
-              Jobs, enabling end‑to‑end functionality for bill transformation.
-              Created a chatbot to analyze and discuss user stories with
-              Generative AI. Generated test cases automatically with GenAI in
-              AT&T sponsored Sandbox VMs, receiving accolades from Senior
-              Directors from AT&T.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="blogs" class="tab-content" style="padding:0px">
+    <!-- <div id="blogs" class="tab-content" style="padding:0px">
         <div style="height:24px; width: calc(100% - 10px);">The below page is loaded in iframe</div>
         <iframe style="height:1000px; width: calc(100% - 10px);"src="https://lifeofmechon.blogspot.com/search/label/Machine%20Learning"></iframe>
-      <!-- <p>Blogs written by Amruthan about technology, development, and more.</p> -->
-    </div>
+      <!-- <p>Blogs written by Amruthan about technology, development, and more.</p> 
+    </div> -->
 
     <script>
       const tabs = document.querySelectorAll("#tabs li");
@@ -1121,15 +1142,28 @@
       let letterIndex = 0;
 
       // Navigation functionality
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((content) => content.classList.remove("active"));
+      // tabs.forEach((tab) => {
+      //   tab.addEventListener("click", () => {
+      //     tabs.forEach((t) => t.classList.remove("active"));
+      //     contents.forEach((content) => content.classList.remove("active"));
 
-          tab.classList.add("active");
-          document.getElementById(tab.dataset.tab).classList.add("active");
-        });
-      });
+      //     tab.classList.add("active");
+      //     document.getElementById(tab.dataset.tab).classList.add("active");
+      //   });
+      // });
+
+      tabs.forEach((t) => t.classList.add("active"));
+      contents.forEach((content) => content.classList.add("active"));
+
+
+      tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    // Highlight the active tab
+    // Scroll to the respective section
+    const targetSection = document.getElementById(tab.dataset.tab);
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
 
       // Dark mode toggle
       toggle.addEventListener("click", () => {
