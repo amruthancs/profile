@@ -7,6 +7,9 @@
       href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
     <title>Amruthan C S</title>
     <style>
       @font-face {
@@ -431,6 +434,9 @@
         margin-top: 50px;
       }
       @media (max-width: 800px) {
+        .navbar{
+          display: none;
+        }
         .navbar ul {
           flex-direction: column;
           align-items: center;
@@ -714,13 +720,16 @@
 }
 /*Styling for small screens*/
 @media screen and (max-width: 800px) {
+  .toggle{
+    display: none;
+  }
   nav {
       background-color: #000; /* Black background for small screens */
   }
-  .navbar {
+  /* .navbar {
         display: block;
         height: 30px;
-      }
+      } */
   .logo i, .logo span {
       color: #63E6BE; /* White color for logo on small screens */
   }
@@ -764,7 +773,6 @@
       border: 1.5px solid #fff; /* White border on hover */
   }
   .hamburger {
-      display: block;
       position: absolute;
       cursor: pointer;
       right: 5%;
@@ -816,6 +824,99 @@
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+/* Navigation Mobile */
+.navigation-mobile{list-style:none;margin:0;padding:0;color:#161617;fill:#161617;font-size:13px}
+.navigation-mobile{display:flex;align-items:center;justify-content:space-evenly;position:fixed;border-top-left-radius:20px;border-top-right-radius:20px;left:0;bottom:0;width:100%;height:50px;background-color:transparent;z-index:999999}
+.navigation-mobile li{visibility:hidden;opacity:0}
+.navigation-mobile a{display:block}
+.navigation-mobile svg{fill:#fefefe;height:20px;width:20px}
+.navigation-mobile svg.line{fill:none;stroke:#fefefe}
+.navigation-mobile .dark-link .svg-2{display:none}
+.navigation-mobile .top-link{visibility:visible;opacity:1}
+.navigation-mobile .top-link a{display:none;align-items:center;justify-content:center;position:fixed;right:20px;bottom:20px;width:50px;height:50px;background-color:transparent;border-radius:50px;box-shadow:0px 4px 12px 0 rgba(9,32,76,.05)}
+.navigation-mobile .top-link svg.line{stroke:#fefefe}
+.navigation-mobile .top-link svg.line .svg-c{stroke:#fefefe}
+.dark-mode .navigation-mobile .dark-link .svg-2{display:block}
+.dark-mode .navigation-mobile .dark-link .svg-1{display:none}
+@media screen and (max-width:736px){
+.dark-mode .extradiv{bottom:-20px}
+.navigation-menu{position:fixed;top:0;left:0;fill:url(#MyGradient);max-width:480px;width:85%;height:100%;margin-left:-100%;padding:calc(57px + 15px) 0 90px 0;-webkit-transition:all .2s ease;transition:all .2s ease;z-index:3;overflow:hidden;box-shadow:0 6px 18px 0 rgba(9,32,76,.035);border-radius:0 20px 20px 0}
+.navigation-menu .sosmed{max-width:480px;width:85%;margin-left:-100%;border-radius:0 0 20px 0} .navigation-menu .close{display:block;border-radius:0 20px 0 0}
+.navigation-menu:hover{overflow-y:auto}
+.navigation-mobile{background-color:black;border:3px solid transparent;border-color:#2CD4D9; }
+.dark-mode .navigation-mobile{background-color:black}
+.navigation-mobile li{visibility:visible;opacity:1}
+.navigation-mobile .top-link a{display:block;position:relative;right:initial;bottom:initial;width:initial;height:initial;background-color:transparent;box-shadow:none}
+.navigation-mobile .top-link svg.line{stroke:#fefefe}
+.navigation-mobile .top-link svg.line .svg-c{stroke:#3a7bd5}
+.dark-mode .navigation-mobile, .dark-mode .navigation-menu, .dark-mode .navigation-menu .close {
+        background-color: #2d325a;
+        background-image: linear-gradient(50deg, #0D0557 0%, #110ec4 20%, #2CD4D9 100%) !important;
+    }
+
+    /* Semi-circle navigation styles */
+    .semi-circle-container {
+      position: fixed;
+      bottom: -150px; /* Hidden initially */
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      width: 300px;
+      height: 55px;
+      padding-left:15px;
+      padding-right: 15px;
+      border-radius: 150px 150px 0 0;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      background-image: linear-gradient(50deg, #0D0557 0%, #110ec4 20%, #2CD4D9 100%) !important;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: transform 0.5s ease;
+      box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .nav-btn {
+      background: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.2);
+      background-color: #f1f1f1;
+    }
+
+    .semi-circle-container.active {
+      transform: translateX(-50%) scale(1);
+      bottom: 54px;
+    }
+    .tooltip {
+      position: absolute;
+      bottom: 60px; /* Adjust distance above the button */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none; /* Avoid interaction with the tooltip */
+      transition: opacity 0.3s ease;
+    }
+    .nav-btn:hover .tooltip {
+      opacity: 1;
+    }
+
     </style>
   </head>
   <body class="dark-mode">
@@ -1124,6 +1225,30 @@
         </div>
       </div>
     </div>
+    <div class="semi-circle-container" id="navMenu">
+    <button class="nav-btn" data-tab="home"><i class="fas fa-home"></i><span class="tooltip">Home</span></button>
+    <button class="nav-btn" data-tab="about"><i class="fas fa-user"></i><span class="tooltip">About</span></button>
+    <button class="nav-btn" data-tab="experience"><i class="fas fa-briefcase"></i><span class="tooltip">Experience</span></button>
+    <button class="nav-btn" data-tab="awards"><i class="fas fa-award"></i><span class="tooltip">Awards</span></button>
+    <button class="nav-btn" data-tab="projects"><i class="fas fa-computer"></i><span class="tooltip">Projects</span></button></div>
+    <ul class="navigation-mobile">
+      <li class="dark-link">
+<div class="link" onclick="darkMode()">
+<svg class="line svg-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg class="line svg-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+</div>
+</li>
+<li class="tag-link">
+<label class="link" onclick="toggleMenu()">
+<svg class="line" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2.000000, 2.000000)"><path d="M14.2855094,9.76996262e-15 L17.5521036,9.76996262e-15 C18.9036211,9.76996262e-15 20,1.10589743 20,2.47018211 L20,5.76410278 C20,7.12735391 18.9036211,8.23428489 17.5521036,8.23428489 L14.2855094,8.23428489 C12.9329672,8.23428489 11.8365883,7.12735391 11.8365883,5.76410278 L11.8365883,2.47018211 C11.8365883,1.10589743 12.9329672,9.76996262e-15 14.2855094,9.76996262e-15 Z"></path><path class="svg-c" d="M2.44892104,9.76996262e-15 L5.71449064,9.76996262e-15 C7.06703281,9.76996262e-15 8.16341169,1.10589743 8.16341169,2.47018211 L8.16341169,5.76410278 C8.16341169,7.12735391 7.06703281,8.23428489 5.71449064,8.23428489 L2.44892104,8.23428489 C1.09637888,8.23428489 3.55271368e-15,7.12735391 3.55271368e-15,5.76410278 L3.55271368e-15,2.47018211 C3.55271368e-15,1.10589743 1.09637888,9.76996262e-15 2.44892104,9.76996262e-15 Z"></path><path d="M2.44892104,11.7657151 L5.71449064,11.7657151 C7.06703281,11.7657151 8.16341169,12.8716125 8.16341169,14.2369308 L8.16341169,17.5298179 C8.16341169,18.8941026 7.06703281,20 5.71449064,20 L2.44892104,20 C1.09637888,20 3.55271368e-15,18.8941026 3.55271368e-15,17.5298179 L3.55271368e-15,14.2369308 C3.55271368e-15,12.8716125 1.09637888,11.7657151 2.44892104,11.7657151 Z"></path><path d="M14.2855094,11.7657151 L17.5521036,11.7657151 C18.9036211,11.7657151 20,12.8716125 20,14.2369308 L20,17.5298179 C20,18.8941026 18.9036211,20 17.5521036,20 L14.2855094,20 C12.9329672,20 11.8365883,18.8941026 11.8365883,17.5298179 L11.8365883,14.2369308 C11.8365883,12.8716125 12.9329672,11.7657151 14.2855094,11.7657151 Z"></path></g></svg>
+</label>
+</li>
+<li class="fullview-link">
+<div class="link" onclick="toggleFullScreen()">
+<svg class="line" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="Fullscreen"><path d="M32,1c0-0.558-0.442-1-1-1l-8.985,0c-0.568,0-0.991,0.448-0.992,1.016C21.023,1.583,21.447,2,22.015,2L30,2   l-0.016,8.023c0,0.568,0.432,1,1,1c0.568-0.001,1-0.432,1-1L32,1.015c0-0.003-0.001-0.005-0.001-0.007C31.999,1.005,32,1.003,32,1z   "></path><path d="M10.016,0H1.031C1.028,0,1.026,0.001,1.023,0.001C1.021,0.001,1.018,0,1.016,0c-0.558,0-1,0.442-1,1   L0,10.008C0,10.576,0.448,11,1.016,11C1.583,11,2,10.576,2,10.008L2.016,2h8c0.568,0,1-0.432,1-1C11.015,0.432,10.583,0,10.016,0z"></path><path d="M9.985,30H2v-8c0-0.568-0.432-1-1-1c-0.568,0-1,0.432-1,1v8.985c0,0.003,0.001,0.005,0.001,0.007   C0.001,30.995,0,30.997,0,31c0,0.558,0.442,1,1,1h8.985c0.568,0,0.991-0.448,0.992-1.016C10.977,30.417,10.553,30,9.985,30z"></path><path d="M30.984,21.023c-0.568,0-0.985,0.424-0.984,0.992V30l-8,0c-0.568,0-1,0.432-1,1c0,0.568,0.432,1,1,1   l8.985,0c0.003,0,0.005-0.001,0.007-0.001C30.995,31.998,30.997,32,31,32c0.558,0,1-0.442,1-1v-8.985   C32,21.447,31.552,21.023,30.984,21.023z"></path></g></svg>
+</div>
+</li>
+</ul>
     <!-- <div id="blogs" class="tab-content" style="padding:0px">
         <div style="height:24px; width: calc(100% - 10px);">The below page is loaded in iframe</div>
         <iframe style="height:1000px; width: calc(100% - 10px);"src="https://lifeofmechon.blogspot.com/search/label/Machine%20Learning"></iframe>
@@ -1132,6 +1257,7 @@
 
     <script>
       const tabs = document.querySelectorAll("#tabs li");
+      const navtabs = document.querySelectorAll(".nav-btn");
       const contents = document.querySelectorAll(".tab-content");
       const toggle = document.getElementById("darkModeToggle");
       const typingText = document.querySelector(".typing-text");
@@ -1167,14 +1293,29 @@
   });
 });
 
+    navtabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+        // Highlight the active tab
+        // Scroll to the respective section
+        const targetSection = document.getElementById(tab.dataset.tab);
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      });
+      });
+
       // Dark mode toggle
       toggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         toggle.textContent = document.body.classList.contains("dark-mode")
           ? "☀️"
           : "🌙";
-          hamburger.click();
+          /* hamburger.click(); */
       });
+      function darkMode() {
+        /* const toggle = document.getElementById("darkModeToggle"); */
+        toggle.click();
+      }
+
+      function toggleFullScreen(){document.fullScreenElement&&null!==document.fullScreenElement||!document.mozFullScreen&&!document.webkitIsFullScreen?document.documentElement.requestFullScreen?document.documentElement.requestFullScreen():document.documentElement.mozRequestFullScreen?document.documentElement.mozRequestFullScreen():document.documentElement.webkitRequestFullScreen&&document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT):document.cancelFullScreen?document.cancelFullScreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitCancelFullScreen&&document.webkitCancelFullScreen()};
 
       
     const hamburger = document.querySelector(".hamburger");
@@ -1195,6 +1336,10 @@
             hamburger.click();
         })
     });
+
+    function hamburgerOn(){
+      hamburger.click();
+    }
     const hand = document.querySelector('.emoji.wave-hand');
 
       function waveOnLoad() {
@@ -1216,6 +1361,11 @@
         hand.classList.remove('wave');
       });
 
+      function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+    
       // Typing effect
      /* function typeEffect() {
         if (letterIndex < phrases[phraseIndex].length) {
