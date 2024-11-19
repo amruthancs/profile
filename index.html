@@ -407,7 +407,7 @@
       }
       .navbar ul {
         display: flex;
-        gap: 15px;
+        gap: 40px;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -430,12 +430,14 @@
         font-size: 24px;
         margin-top: 50px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 800px) {
         .navbar ul {
           flex-direction: column;
           align-items: center;
           margin: auto;
           padding-bottom: 12px;
+          left: 0;
+          gap: 15px;
           position: fixed;
         }
       }
@@ -728,7 +730,7 @@
       flex-direction: column;
       clip-path: circle(50px at 90% -25%);
       -webkit-clip-path: circle(50px at 90% -25%);
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       pointer-events: none;
   }
   .nav-links.open {
@@ -777,26 +779,26 @@
       opacity: 0;
   }
   .nav-links li:nth-child(1) {
-      transition: all 0.3s ease 0.2s;
+      transition: all 0.3s ease 0.1s;
   }
   .nav-links li:nth-child(2) {
-      transition: all 0.3s ease 0.4s;
+      transition: all 0.3s ease 0.2s;
   }
   .nav-links li:nth-child(3) {
-      transition: all 0.3s ease 0.6s;
+      transition: all 0.3s ease 0.3s;
   }
   .nav-links li:nth-child(4) {
-      transition: all 0.3s ease 0.7s;
+      transition: all 0.3s ease 0.4s;
   }
   .nav-links li:nth-child(5) {
-      transition: all 0.3s ease 0.8s;
+      transition: all 0.3s ease 0.5s;
   }
   .nav-links li:nth-child(6) {
-      transition: all 0.3s ease 0.9s;
+      transition: all 0.3s ease 0.6s;
       margin: 0;
   }
   .nav-links li:nth-child(7) {
-      transition: all 0.3s ease 1s;
+      transition: all 0.3s ease 0.7s;
       margin: 0;
   }
   li.fade {
@@ -825,11 +827,11 @@
         <div class="line3"></div>
     </div>
       <ul class="nav-links" id="tabs">
-        <li data-tab="home">🏠 Home</li>
-        <li data-tab="about">📄 About</li>
-        <li data-tab="experience">💼 Experience</li>
-        <li data-tab="awards">🏆 Awards</li>
-        <li data-tab="projects">📂 Projects</li>
+        <li data-tab="home">Home</li>
+        <li data-tab="about">About</li>
+        <li data-tab="experience">Experience</li>
+        <li data-tab="awards">Awards</li>
+        <li data-tab="projects">Projects</li>
         <!-- <li data-tab="blogs">✍️ Blogs</li> -->
         <span class="toggle" id="darkModeToggle">☀️</span>
       </ul>
@@ -1193,6 +1195,26 @@
             hamburger.click();
         })
     });
+    const hand = document.querySelector('.emoji.wave-hand');
+
+      function waveOnLoad() {
+        hand.classList.add('wave');
+        setTimeout(function() {
+          hand.classList.remove('wave');
+        }, 2000);
+      }
+
+      setTimeout(function() {
+        waveOnLoad();
+      }, 1000);
+
+      hand.addEventListener('mouseover', function() {
+        hand.classList.add('wave');
+      });
+
+      hand.addEventListener('mouseout', function() {
+        hand.classList.remove('wave');
+      });
 
       // Typing effect
      /* function typeEffect() {
